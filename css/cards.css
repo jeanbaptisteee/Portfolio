@@ -1,0 +1,103 @@
+/* --- GRILLES DE CARTES --- */
+.links-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* --- STYLE GÉNÉRAL DES CARTES --- */
+.link-card,
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 20, 0, 0.4);
+    border: 1px solid var(--terminal-green);
+    padding: 0;
+    transition: all 0.3s ease;
+    height: 100%;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card {
+    padding: 20px;
+}
+
+.link-card.box-visible,
+.project-card.box-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.link-card:hover,
+.project-card:hover {
+    background: var(--terminal-dim);
+    color: var(--terminal-green);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--terminal-green);
+}
+
+/* --- HEADER DE LA CARTE --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--terminal-green);
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.link-card:hover .card-header {
+    border-bottom: 1px dashed #000;
+}
+
+/* --- CORPS DE LA CARTE --- */
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.card-body p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* --- FOOTER DE LA CARTE --- */
+.card-footer {
+    border-top: 1px solid var(--terminal-green);
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.link-card:hover .card-footer {
+    border-top: 1px solid #000;
+    background: transparent;
+}
+
+/* --- ÉLÉMENTS SPÉCIFIQUES (STATS & TECH) --- */
+.fake-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    opacity: 0.7;
+}
+
+.tech-stack span {
+    background: var(--terminal-green);
+    color: black;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    
+    <link href="../css/color.css" rel="stylesheet">
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/cards.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../autre/jb.png">
+</head>
+<body>
+    <nav class="system-nav">
+        <div class="nav-links">
+            <a href="../index.html">[ACCUEIL]</a> 
+            <a href="../html/moi.html">[À PROPOS]</a>
+            <a href="../html/Project.html" class="active">[PROJETS]</a>
+            <a href="../html/liens.html">[LIENS]</a>
+            <a href="../html/contact.html">[CONTACT]</a>
+        </div>
+    </nav>
+
+    <div class="footer-section">
+        <button id="theme-btn" onclick="toggleTheme()">MODE: DARK</button>
+    </div>
+
+    <div class="contenu-site" style="max-width: 1200px; margin: 0 auto;">
+        <h1 class="hack-text">ARCHIVES_PROJETS</h1>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-header">
+                    <span class="hack-text">ID: #001</span>
+                    <span class="status hack-text">STATUS: TERMINÉ</span>
+                </div>
+                <h3 class="hack-text">API Cinéma</h3>
+                <p class="desc hack-text">Utilisation d'une API pour un site qui permet d'afficher ces films.</p>
+                <div class="tech-stack">
+                    <span class="hack-text">[HTML]</span> 
+                    <span class="hack-text">[CSS]</span> 
+                    <span class="hack-text">[JS]</span>
+                </div>
+                <br>
+                <a href="https://jeanbaptisteee.github.io/cinema--devoir/" target="_blank" class="hack-text">> ACCÉDER AU CODE</a>
+            </div>
+            <div class="project-card">
+                <div class="card-header">
+                    <span class="hack-text">ID: #002</span>
+                    <span class="status blink-text hack-text">STATUS: TERMINÉ</span>
+                </div>
+                <h3 class="hack-text">Game Of Amazon</h3>
+                <p class="desc hack-text">Jeu de l'Amazon réalisée avec un affichage graphique avec des son et décors uniques.</p>
+                <div class="tech-stack">
+                    <span class="hack-text">[PYTHON]</span> 
+                </div>
+                <br>
+                <a href="https://github.com/jeanbaptisteee/Game-of-Amazon-devoir-" target="_blank" class="hack-text">> ACCÉDER AU CODE</a>
+            </div>
+            <div class="project-card">
+                <div class="card-header">
+                    <span class="hack-text">ID: #003</span>
+                    <span class="status blink-text hack-text">STATUS: EN COURS</span>
+                </div>
+                <h3 class="hack-text">Jeux de la Taupe</h3>
+                <p class="desc hack-text">En construction</p>
+                <div class="tech-stack">
+                    <span class="hack-text">[PYTHON]</span> 
+                </div>
+                <br>
+                <a href="https://github.com/jeanbaptisteee/Mole-and-Company" target="_blank" class="hack-text">> VOIR LA DÉMO</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/script.js"></script> 
+</body>
+</html>

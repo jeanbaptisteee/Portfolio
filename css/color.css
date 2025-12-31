@@ -1,0 +1,10 @@
+:root {
+    --terminal-green: #00ff00;
+    --terminal-bg: #000000;
+    --terminal-dim: #004400;
+}
+body.light-mode {
+    --terminal-bg: #e6e6e6; 
+    --terminal-green: #003300; 
+    --terminal-dim: #889988; 
+}
