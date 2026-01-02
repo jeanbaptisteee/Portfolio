@@ -26,19 +26,27 @@ window.addEventListener('load',function(){
 });
 
 if(overlay&&video){
-    overlay.addEventListener('click',function(){
-        if(video.paused){
-            if(message)message.style.opacity='0';
+    let slowMotionFait = false;
+    overlay.addEventListener('click', function() {
+        if (video.paused) {
             video.play();
+            if (pauseEffectuee) {
+                video.playbackRate = 1.0; 
+            }
+            if (message) message.style.display = 'none';
         }
     });
-    video.addEventListener('timeupdate',function(){
-        if(video.currentTime>=8.5&&!pauseEffectuee){
+    video.addEventListener('timeupdate', function() {
+        if (video.currentTime >= 6 && !slowMotionFait) {
+            video.playbackRate = 0.5;
+            slowMotionFait = true;
+        }
+        if (video.currentTime >= 8.5 && !pauseEffectuee) {
             video.pause();
-            pauseEffectuee=true;
-            if(message){
-                message.innerText="CLIQUER POUR CONTINUER";
-                message.style.opacity='1';
+            pauseEffectuee = true;
+            if (message) {
+                message.innerText = "CLIQUER POUR CONTINUER";
+                message.style.display = 'block';
             }
         }
     });
@@ -120,4 +128,5 @@ function updateBtnText(){
     const btn=document.getElementById('theme-btn');
     if(btn)btn.innerText=document.body.classList.contains('light-mode')?"MODE: LIGHT":"MODE: DARK";
     if(typeof createParticles==="function")createParticles();
+
 }
